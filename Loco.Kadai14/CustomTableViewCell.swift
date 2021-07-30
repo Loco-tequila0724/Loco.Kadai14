@@ -1,23 +1,16 @@
-//
-//  CustomTableViewCell.swift
-//  Loco.Kadai14
-//
-//  Created by 日高隼人 on 2021/07/30.
-//
-
 import UIKit
 
 class CustomTableViewCell: UITableViewCell {
+    @IBOutlet private weak var checkMarkImageView: UIImageView!
+    @IBOutlet private weak var fruitsLabel: UILabel!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    func configure(item: CheckItem) {
+        if item.isChecked == true {
+            checkMarkImageView.image = UIImage(systemName: "checkmark")
+        } else {
+            checkMarkImageView.image = nil
+        }
+        checkMarkImageView.tintColor = .orange
+        fruitsLabel.text = item.name
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }

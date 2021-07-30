@@ -13,6 +13,8 @@
 		385B0C5F26B3CD21003B7137 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 385B0C5D26B3CD21003B7137 /* Main.storyboard */; };
 		385B0C6126B3CD23003B7137 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 385B0C6026B3CD23003B7137 /* Assets.xcassets */; };
 		385B0C6426B3CD23003B7137 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 385B0C6226B3CD23003B7137 /* LaunchScreen.storyboard */; };
+		385B0C6D26B3CD3E003B7137 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 385B0C6C26B3CD3E003B7137 /* .swiftlint.yml */; };
+		385B0C6F26B3CFF2003B7137 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385B0C6E26B3CFF2003B7137 /* CustomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		385B0C6026B3CD23003B7137 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		385B0C6326B3CD23003B7137 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		385B0C6526B3CD23003B7137 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		385B0C6C26B3CD3E003B7137 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		385B0C6E26B3CFF2003B7137 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +44,7 @@
 		385B0C4B26B3CD21003B7137 = {
 			isa = PBXGroup;
 			children = (
+				385B0C6C26B3CD3E003B7137 /* .swiftlint.yml */,
 				385B0C5626B3CD21003B7137 /* Loco.Kadai14 */,
 				385B0C5526B3CD21003B7137 /* Products */,
 			);
@@ -59,6 +64,7 @@
 				385B0C5726B3CD21003B7137 /* AppDelegate.swift */,
 				385B0C5926B3CD21003B7137 /* SceneDelegate.swift */,
 				385B0C5B26B3CD21003B7137 /* ViewController.swift */,
+				385B0C6E26B3CFF2003B7137 /* CustomTableViewCell.swift */,
 				385B0C5D26B3CD21003B7137 /* Main.storyboard */,
 				385B0C6026B3CD23003B7137 /* Assets.xcassets */,
 				385B0C6226B3CD23003B7137 /* LaunchScreen.storyboard */,
@@ -77,6 +83,7 @@
 				385B0C5026B3CD21003B7137 /* Sources */,
 				385B0C5126B3CD21003B7137 /* Frameworks */,
 				385B0C5226B3CD21003B7137 /* Resources */,
+				385B0C6B26B3CD2C003B7137 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -124,6 +131,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				385B0C6D26B3CD3E003B7137 /* .swiftlint.yml in Resources */,
 				385B0C6426B3CD23003B7137 /* LaunchScreen.storyboard in Resources */,
 				385B0C6126B3CD23003B7137 /* Assets.xcassets in Resources */,
 				385B0C5F26B3CD21003B7137 /* Main.storyboard in Resources */,
@@ -132,6 +140,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		385B0C6B26B3CD2C003B7137 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		385B0C5026B3CD21003B7137 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -139,6 +167,7 @@
 			files = (
 				385B0C5C26B3CD21003B7137 /* ViewController.swift in Sources */,
 				385B0C5826B3CD21003B7137 /* AppDelegate.swift in Sources */,
+				385B0C6F26B3CFF2003B7137 /* CustomTableViewCell.swift in Sources */,
 				385B0C5A26B3CD21003B7137 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
