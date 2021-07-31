@@ -4,7 +4,7 @@ protocol InputTextDelegate: AnyObject {
     func saveTextAndReturn(fruitsName: String)
 }
 
-class InputNameViewController: UIViewController {
+class InputTextViewController: UIViewController {
     @IBOutlet weak private var inputTextField: UITextField!
 
     weak var delegate: InputTextDelegate?

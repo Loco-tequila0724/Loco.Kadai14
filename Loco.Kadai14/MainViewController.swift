@@ -26,7 +26,7 @@ class MainViewController: UIViewController {
         guard let identifier = segue.identifier else { return }
 
         if identifier == "ShowInputVC" {
-            guard let navigationController = segue.destination as? UINavigationController, let inputNameViewController = navigationController.topViewController as? InputNameViewController else { return }
+            guard let navigationController = segue.destination as? UINavigationController, let inputNameViewController = navigationController.topViewController as? InputTextViewController else { return }
             inputNameViewController.delegate = self
         }
     }

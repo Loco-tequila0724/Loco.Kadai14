@@ -14,7 +14,7 @@
 		385B0C6126B3CD23003B7137 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 385B0C6026B3CD23003B7137 /* Assets.xcassets */; };
 		385B0C6426B3CD23003B7137 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 385B0C6226B3CD23003B7137 /* LaunchScreen.storyboard */; };
 		385B0C6F26B3CFF2003B7137 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385B0C6E26B3CFF2003B7137 /* CustomTableViewCell.swift */; };
-		385B0C7126B3E46B003B7137 /* InputNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385B0C7026B3E46B003B7137 /* InputNameViewController.swift */; };
+		385B0C7126B3E46B003B7137 /* InputTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385B0C7026B3E46B003B7137 /* InputTextViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +27,7 @@
 		385B0C6326B3CD23003B7137 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		385B0C6526B3CD23003B7137 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		385B0C6E26B3CFF2003B7137 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
-		385B0C7026B3E46B003B7137 /* InputNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputNameViewController.swift; sourceTree = "<group>"; };
+		385B0C7026B3E46B003B7137 /* InputTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +64,7 @@
 				385B0C5926B3CD21003B7137 /* SceneDelegate.swift */,
 				385B0C6E26B3CFF2003B7137 /* CustomTableViewCell.swift */,
 				385B0C5B26B3CD21003B7137 /* MainViewController.swift */,
-				385B0C7026B3E46B003B7137 /* InputNameViewController.swift */,
+				385B0C7026B3E46B003B7137 /* InputTextViewController.swift */,
 				385B0C5D26B3CD21003B7137 /* Main.storyboard */,
 				385B0C6026B3CD23003B7137 /* Assets.xcassets */,
 				385B0C6226B3CD23003B7137 /* LaunchScreen.storyboard */,
@@ -168,7 +168,7 @@
 				385B0C5826B3CD21003B7137 /* AppDelegate.swift in Sources */,
 				385B0C6F26B3CFF2003B7137 /* CustomTableViewCell.swift in Sources */,
 				385B0C5A26B3CD21003B7137 /* SceneDelegate.swift in Sources */,
-				385B0C7126B3E46B003B7137 /* InputNameViewController.swift in Sources */,
+				385B0C7126B3E46B003B7137 /* InputTextViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

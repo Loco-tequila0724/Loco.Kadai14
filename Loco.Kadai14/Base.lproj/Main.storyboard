@@ -81,10 +81,10 @@
             </objects>
             <point key="canvasLocation" x="-1326" y="-145"/>
         </scene>
-        <!--Input Name View Controller-->
+        <!--Input Text View Controller-->
         <scene sceneID="tWe-NR-4KW">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Kqu-7P-KJC" customClass="InputNameViewController" customModule="Loco_Kadai14" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Kqu-7P-KJC" customClass="InputTextViewController" customModule="Loco_Kadai14" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sgC-jZ-8MU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
