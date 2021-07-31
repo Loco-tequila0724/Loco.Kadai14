@@ -1,6 +1,8 @@
 //
 //  SceneDelegate.swift
-//  Loco.Kadai14
+//  Loco.Kadai14:]
+//
+
 //
 //  Created by 日高隼人 on 2021/07/30.
 //

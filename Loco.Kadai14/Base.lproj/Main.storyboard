@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Loco_Kadai14" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Loco_Kadai14" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -66,14 +66,72 @@
                             <constraint firstItem="kFX-d0-tRz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="t3l-DZ-P5g"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Pkg-XT-pCn"/>
+                    <navigationItem key="navigationItem" id="N0P-cq-56T">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="RqM-MH-tHk">
+                            <connections>
+                                <segue destination="6Uh-mP-MES" kind="presentation" identifier="ShowInputVC" id="yzb-yu-udH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="kFX-d0-tRz" id="Cxy-GU-5Q4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1286" y="-145"/>
+            <point key="canvasLocation" x="-1326" y="-145"/>
+        </scene>
+        <!--Input Name View Controller-->
+        <scene sceneID="tWe-NR-4KW">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Kqu-7P-KJC" customClass="InputNameViewController" customModule="Loco_Kadai14" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sgC-jZ-8MU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QcJ-yO-7yD">
+                                <rect key="frame" x="43" y="175.5" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vm6-37-PvS">
+                                <rect key="frame" x="100" y="169" width="233" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="IJK-wK-gwJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QcJ-yO-7yD" firstAttribute="leading" secondItem="IJK-wK-gwJ" secondAttribute="leading" constant="43" id="9db-ym-5Bi"/>
+                            <constraint firstItem="IJK-wK-gwJ" firstAttribute="trailing" secondItem="vm6-37-PvS" secondAttribute="trailing" constant="81" id="TCu-NX-wDg"/>
+                            <constraint firstItem="vm6-37-PvS" firstAttribute="centerY" secondItem="QcJ-yO-7yD" secondAttribute="centerY" id="US0-sS-dfT"/>
+                            <constraint firstItem="vm6-37-PvS" firstAttribute="leading" secondItem="QcJ-yO-7yD" secondAttribute="trailing" constant="22" id="dHO-Qg-0N7"/>
+                            <constraint firstItem="QcJ-yO-7yD" firstAttribute="top" secondItem="IJK-wK-gwJ" secondAttribute="top" constant="87.5" id="n2O-UY-i2f"/>
+                            <constraint firstItem="vm6-37-PvS" firstAttribute="top" secondItem="IJK-wK-gwJ" secondAttribute="top" constant="81" id="vCg-v1-zYv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="J9J-2C-DPk">
+                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="cancel" id="sJ2-dM-rjU">
+                            <connections>
+                                <segue destination="emw-JE-zMI" kind="unwind" unwindAction="exitWithSegue:" id="rjf-81-dz9"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="xXo-75-knC">
+                            <connections>
+                                <action selector="saveTextButton:" destination="Kqu-7P-KJC" id="Pka-gV-V7p"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="inputTextField" destination="vm6-37-PvS" id="jzo-7c-itT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tXO-87-h65" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="emw-JE-zMI" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="69.565217391304358" y="-145.3125"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ObS-yv-vTp">
@@ -91,7 +149,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4bm-vZ-7cw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2020" y="-145"/>
+            <point key="canvasLocation" x="-2048" y="-145"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QTY-Ck-9Sv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="6Uh-mP-MES" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zHX-LI-CBI">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Kqu-7P-KJC" kind="relationship" relationship="rootViewController" id="W2c-4L-d2V"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WDC-Tg-5r2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-622" y="-145"/>
         </scene>
     </scenes>
     <resources>
