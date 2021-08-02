@@ -36,14 +36,12 @@ class MainViewController: UIViewController {
 }
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
-    var cellIdentifier: String { "MyCell" }
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         checkItems.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? CustomTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.cellIdentifier, for: indexPath) as? CustomTableViewCell
         cell?.configure(item: checkItems[indexPath.row])
         return cell!
     }

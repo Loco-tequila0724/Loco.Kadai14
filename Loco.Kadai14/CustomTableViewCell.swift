@@ -1,16 +1,22 @@
 import UIKit
 
 class CustomTableViewCell: UITableViewCell {
-    @IBOutlet private weak var checkMarkImageView: UIImageView!
+    static let cellIdentifier = "MyCell"
+
+    @IBOutlet private weak var checkMarkImageView: UIImageView! {
+        didSet {
+            checkMarkImageView.tintColor = .orange
+        }
+    }
+
     @IBOutlet private weak var fruitsLabel: UILabel!
 
     func configure(item: CheckItem) {
-        if item.isChecked == true {
+        if item.isChecked {
             checkMarkImageView.image = UIImage(systemName: "checkmark")
         } else {
             checkMarkImageView.image = nil
         }
-        checkMarkImageView.tintColor = .orange
         fruitsLabel.text = item.name
     }
 }
