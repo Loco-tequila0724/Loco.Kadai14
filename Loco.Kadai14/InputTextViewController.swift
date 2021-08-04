@@ -9,9 +9,7 @@ class InputTextViewController: UIViewController {
 
     weak var delegate: InputTextDelegate?
 
-    private var fruitsName = ""
-
-    private func alert(message: String) {
+    private func presentAlert(message: String) {
         let alert = UIAlertController(
             title: "警告",
             message: message,
@@ -28,13 +26,10 @@ class InputTextViewController: UIViewController {
     }
 
     @IBAction private func saveTextButton(_ sender: Any) {
-        guard inputTextField.text != "" else {
-            return alert(message: "テキストを入力願います。")
+        guard let inputText = inputTextField.text, !inputText.isEmpty else {
+            presentAlert(message: "名前を入力してください。")
+            return
         }
-
-        guard let inputText = inputTextField.text else { return }
-
-        fruitsName = inputText
-        delegate?.saveTextAndReturn(fruitsName: fruitsName)
+        delegate?.saveTextAndReturn(fruitsName: inputText)
     }
 }

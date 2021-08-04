@@ -26,8 +26,8 @@ class MainViewController: UIViewController {
         guard let identifier = segue.identifier else { return }
 
         if identifier == "ShowInputVC" {
-            guard let navigationController = segue.destination as? UINavigationController, let inputNameViewController = navigationController.topViewController as? InputTextViewController else { return }
-            inputNameViewController.delegate = self
+            guard let navigationController = segue.destination as? UINavigationController, let inputTextViewController = navigationController.topViewController as? InputTextViewController else { return }
+            inputTextViewController.delegate = self
         }
     }
 
@@ -36,14 +36,12 @@ class MainViewController: UIViewController {
 }
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
-    var cellIdentifier: String { "MyCell" }
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         checkItems.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? CustomTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.cellIdentifier, for: indexPath) as? CustomTableViewCell
         cell?.configure(item: checkItems[indexPath.row])
         return cell!
     }
